@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Совершенно новый сайт</title>
+    <style>
+        /* Основные стили */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url(https://i.pinimg.com/736x/9d/71/d6/9d71d68d66bce9df578f56a97d3fdd43.jpg) no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            position: relative; /* Это важно для корректного позиционирования кнопок */
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        /* Стили для шапки */
+        header {
+            padding: 120px 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #fff;
+        }
+        header h1 {
+            font-size: 4em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Навигация */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        nav a {
+            margin: 0 20px;
+            font-size: 1.5em;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6347;
+            transform: scale(1.1);
+        }
+
+        /* Секции */
+        section {
+            padding: 60px 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        section p {
+            font-size: 1.4em;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            margin-top: 30px;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            color: #fff;
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: linear-gradient(to right, #3498db, #8e44ad);
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Анимации для текста и кнопок */
+        .fadeIn {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .scaleUp {
+            animation: scaleUp 0.5s ease-in-out;
+        }
+
+        /* Позиционирование */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Позиция кнопок установить/выйти */
+        .install-btn, .exit-btn {
+            position: fixed;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            color: #fff;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .install-btn {
+            background: linear-gradient(to right, #ff8c00, #ff4500);
+            right: 20px;
+            bottom: 20px; /* Кнопка установить внизу справа */
+        }
+
+        .exit-btn {
+            background: linear-gradient(to right, #4682b4, #5f9ea0);
+            left: 20px;
+            top: 20px; /* Кнопка выйти вверху слева */
+        }
+
+        .install-btn:hover, .exit-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .install-btn:active, .exit-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1 class="fadeIn">Добро пожаловать на наш сайт</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html" class="scaleUp">Главная</a>
+    <a href="about.html" class="scaleUp">О нас</a>
+    <a href="contact.html" class="scaleUp">Контакты</a>
+    <a href="#details" class="scaleUp">Подробности</a>
+</nav>
+
+<section id="home">
+    <div class="container">
+        <h2 class="fadeIn">Главная страница</h2>
+        <p class="fadeIn">Здесь мы расскажем о нашем сайте и его возможностях. Все наши проекты разработаны с любовью и вниманием к деталям.</p>
+        <a href="details.html" class="btn fadeIn">Узнать больше</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="fadeIn">О нас</h2>
+        <p class="fadeIn">Наша команда состоит из профессионалов, которые нацелены на создание инновационных решений для наших клиентов. Мы стремимся к совершенству в каждой детали.</p>
+        <a href="contact.html" class="btn fadeIn">Связаться с нами</a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="fadeIn">Контакты</h2>
+        <p class="fadeIn">Вы можете связаться с нами через электронную почту или по телефону. Мы всегда готовы помочь вам с любыми вопросами!</p>
+        <a href="mailto:info@mysite.com" class="btn fadeIn">Написать нам</a>
+    </div>
+</section>
+
+<section id="details">
+    <div class="container">
+        <h2 class="fadeIn">Подробная информация</h2>
+        <p class="fadeIn">Мы создаём инновационные решения для различных отраслей, сочетая передовые технологии и лучшие практики. Наша команда состоит из профессионалов, готовых к любым вызовам и новым проектам. Мы стремимся быть лидерами в своей области и предлагать только качественные услуги нашим клиентам.</p>
+        <p class="fadeIn">Каждый проект - это шаг вперёд в развитии, и мы гордимся каждым достижением. Мы понимаем важность технологии и её интеграции в жизнь каждого человека.</p>
+        <a href="index.html" class="btn fadeIn">Вернуться на главную</a>
+    </div>
+</section>
+
+<!-- Кнопки установить и выйти -->
+<a href="#" class="install-btn">Установить</a>
+<a href="javascript:window.close();" class="exit-btn">Выйти</a>
+
+</body>
+</html>
